@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinalProject</title>
+    <style>
+      .container {
+        max-width: 500px;
+
+        padding: 10px 40px;
+        box-shadow: rgb(37 39 89 / 10%) 0px 8px 8px 0;
+        margin: auto;
+        border-radius: 15px;
+        background-color: #f7d098;
+      }
+      body {
+        background-color: #f2ebd9;
+      }
+
+      h1 {
+        color: #367f27;
+        text-align: center;
+        font-size: 38px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      h2 {
+        text-align: center;
+        font-size: 26px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        color: #367f27;
+        border: 2px solid rgba(156, 7, 104, 0.8);
+        padding: 10px 10px;
+        border-radius: 8px;
+        margin: auto;
+      }
+
+      img {
+        display: block;
+        margin: 30px auto;
+        width: 70%;
+        border-radius: 8px;
+      }
+
+      p {
+        line-height: 1.4;
+        color: #9c0768;
+        margin: 20px auto;
+        font-weight: 520;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+      }
+
+      hr {
+        border-color: rgba(97, 65, 45, 0.6);
+        margin-bottom: 5px;
+      }
+
+      .learn {
+        margin: 10px auto;
+      }
+
+      a {
+        color: #367f27;
+      }
+
+      button {
+        display: block;
+        margin: 30px auto;
+        padding: 20px 15px;
+        color: white;
+        font-size: 19px;
+        background: #367f27;
+        border: none;
+        border-radius: 20px;
+        transition: all 200ms ease;
+        box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
+      }
+
+      button:hover {
+        color: #fefbef;
+        background: rgba(97, 65, 45, 0.9);
+        cursor: pointer;
+      }
+
+      .footer {
+        color: #9c0768;
+        text-align: center;
+        margin: auto;
+        font-family: arial;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Fermented Vegetables</h1>
+      <h2>Why you should eat them daily</h2>
+      <img
+        src="
+    https://s3.amazonaws.com/shecodesio-production/uploads/files/000/025/137/original/fermented_veggies.jpeg?1642550062"
+      />
+
+      <p>
+        <strong>Fermented vegetables </strong>play a major role in keeping our
+        gut flora balanced and our digestive system healthy. Since a big part of
+        our immune system is actually in the gut, maintaining a balanced,
+        healthy digestive system is a very important part of having a strong
+        immune system.
+      </p>
+      <hr />
+      <p class="learn">
+        Learn more about
+        <a
+          href="https://www.health.harvard.edu/staying-healthy/fermented-foods-can-add-depth-to-your-diet"
+          target="_blank"
+          class="more-about"
+        >
+          the benefits of fermented vegetables
+        </a>
+      </p>
+      <button>Fermented Vegetables</button>
+      <div class="footer">
+        <em>This page was built by</em>
+        <a href="https://www.linkedin.com/in/gali-neufeld-69a15461/">
+          <em>Gali Neufeld</em>
+        </a>
+      </div>
+    </div>
+    <script>
+      function buyVeg() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        let h2 = document.querySelector("h2");
+
+        if (name.length > 0) {
+          h2.innerHTML = `Thank you ${name}. We'll email you shortly`;
+        } else {
+          alert(`Please click the button again and type your name in the box`);
+        }
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", buyVeg);
+    </script>
+  </body>
+</html>
